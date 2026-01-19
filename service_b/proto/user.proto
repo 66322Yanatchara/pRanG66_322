@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service BTSService {
+  rpc GetMember (MemberRequest) returns (MemberReply);
+}
+
+message MemberRequest {
+  int32 id = 1;
+}
+
+message MemberReply {
+  string name = 1;
+  string birthday = 2;
+  string province = 3;
+}
